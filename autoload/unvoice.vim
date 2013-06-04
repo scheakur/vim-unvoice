@@ -95,6 +95,8 @@ endfunction
 
 function! s:shout()
 	let text = join(getbufline('%', 1, '$'), "\n")
+	" remove trailing line breaks
+	let text = substitute(text, '\n\+$', '', '')
 	call s:write(text)
 
 	let on_shout = get(g:, 'unvoice_after_shout', 'close')

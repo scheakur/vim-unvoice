@@ -82,7 +82,7 @@ function! s:open_window()
 	inoremap <buffer> <silent> <C-CR>  <ESC>:UnvoiceWrite<CR>
 	nnoremap <buffer> q  <C-w>c
 
-	autocmd BufHidden <buffer> call let <SID>buf_nr = -1
+	autocmd BufHidden <buffer>  let <SID>buf_nr = -1
 
 	redraw!
 endfunction
